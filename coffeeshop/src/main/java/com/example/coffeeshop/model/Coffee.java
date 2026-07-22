@@ -6,7 +6,6 @@ public class Coffee {
     private String name;
     private double price;
 
-    // ต้องมี constructor ว่าง (no-args) ไว้ให้ Jackson แปลง JSON -> Object
     public Coffee() {
     }
 
