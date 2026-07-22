@@ -23,7 +23,6 @@ public class CoffeeController {
 
     private final CoffeeService coffeeService;
 
-    // Constructor injection - Spring จะฉีด CoffeeService เข้ามาเอง
     public CoffeeController(CoffeeService coffeeService) {
         this.coffeeService = coffeeService;
     }

@@ -13,7 +13,7 @@ import com.example.coffeeshop.model.Coffee;
 public class CoffeeService {
 
     private final List<Coffee> coffees = new ArrayList<>();
-    // ใช้ AtomicLong สำหรับ gen id ต่อเนื่อง ไม่ชนกัน
+    // gen id ต่อเนื่อง ไม่ชนกัน
     private final AtomicLong idCounter = new AtomicLong();
 
     // ใส่ข้อมูลตัวอย่างตอน service ถูกสร้าง (constructor)
@@ -51,7 +51,7 @@ public class CoffeeService {
         return coffees.removeIf(c -> c.getId().equals(id));
     }
 
-    // Bonus: ค้นหาตามชื่อ
+    // ค้นหาตามชื่อ
     public List<Coffee> searchByName(String keyword) {
         return coffees.stream()
                 .filter(c -> c.getName().toLowerCase().contains(keyword.toLowerCase()))
